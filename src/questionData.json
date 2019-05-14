@@ -1,0 +1,48 @@
+[
+  {
+    "id": 0,
+    "question": "What type of leaves does it have?",
+    "possible_answers": [
+        {
+          "text": "broad leaves",
+          "next_q": 1
+        },
+              {
+          "text": "needles",
+          "next_q": 2
+        },
+              {
+          "text": "scale like",
+          "next_q": 3
+        }
+      ]
+    },
+    {
+    "id": 1,
+    "question": "Are the leaves compound?",
+    "possible_answers": [
+        {
+          "text": "Yes, they are composed of 2 or more leaflets.",
+          "next_q": "TBD"
+        },
+              {
+          "text": "No, they are simple. They are made of a single leaflet.",
+          "next_q": "TBD"
+        }
+      ]
+    },
+    {
+    "id": 2,
+    "question": "Are the needles bundled together?",
+    "possible_answers": [
+        {
+          "text": "Yes.",
+          "next_q": "TBD"
+        },
+              {
+          "text": "No.",
+          "next_q": "TBD"
+        }
+      ]
+    }
+]
