@@ -1,48 +1,197 @@
-[
-  {
-    "id": 0,
-    "question": "What type of leaves does it have?",
-    "possible_answers": [
-        {
-          "text": "broad leaves",
-          "next_q": 1
-        },
-              {
-          "text": "needles",
-          "next_q": 2
-        },
-              {
-          "text": "scale like",
-          "next_q": 3
-        }
-      ]
-    },
-    {
-    "id": 1,
-    "question": "Are the leaves compound?",
-    "possible_answers": [
-        {
-          "text": "Yes, they are composed of 2 or more leaflets.",
-          "next_q": "TBD"
-        },
-              {
-          "text": "No, they are simple. They are made of a single leaflet.",
-          "next_q": "TBD"
-        }
-      ]
-    },
-    {
-    "id": 2,
-    "question": "Are the needles bundled together?",
-    "possible_answers": [
-        {
-          "text": "Yes.",
-          "next_q": "TBD"
-        },
-              {
-          "text": "No.",
-          "next_q": "TBD"
-        }
-      ]
-    }
+[{
+		"id": 0,
+		"question": "What type of leaves does it have?",
+		"possible_answers": [{
+				"text": "broad leaves",
+				"next_q": 2
+			},
+			{
+				"text": "needles",
+				"next_q": 3
+			},
+			{
+				"text": "scale like",
+				"next_q": 4
+			}
+		]
+	},
+	{
+		"id": 2,
+		"question": "Are the leaves compound?",
+		"possible_answers": [{
+				"text": "Yes, they are composed of 2 or more leaflets.",
+				"next_q": "TBD"
+			},
+			{
+				"text": "No, they are simple. They are made of a single leaflet.",
+				"next_q": "TBD"
+			}
+		]
+	},
+	{
+		"id": 3,
+		"question": "Are the needles bundled together?",
+		"possible_answers": [{
+				"text": "Yes.",
+				"next_q": 4
+			},
+			{
+				"text": "No.",
+				"next_q": 5
+			}
+		]
+	},
+	{
+		"id": 4,
+		"question": "Do the needle bundles have fewer than 6 needles?",
+		"possible_answers": [{
+				"text": "Yes. It is a pine.",
+				"next_q": 6
+			},
+			{
+				"text": "No. They have more than 6, it is a larch.",
+				"next_q": 7
+			}
+		]
+	},
+	{
+		"id": 5,
+		"question": "Are there smooth, round scars where old needles have fallen off the twig?",
+		"possible_answers": [{
+				"text": "Yes. It is a Fir.",
+				"next_q": 8
+			},
+			{
+				"text": "No.",
+				"next_q": "TBD"
+			}
+		]
+	},
+	{
+		"id": 6,
+		"question": "Are the needles in...",
+		"possible_answers": [{
+				"text": "5 to a bundle.",
+				"next_q": 13
+			},
+			{
+				"text": "4 to a bundle, mostly. It is a Parry Pinyon.",
+				"next_q": null,
+				"answer": "pinus quadrifolia"
+			},
+			{
+				"text": "Three to a bundle.",
+				"next_q": "TBD"
+			},
+			{
+				"text": "Pairs.",
+				"next_q": "TBD"
+			}
+		]
+	},
+	{
+		"id": 7,
+		"question": "The needles are...",
+		"possible_answers": [{
+				"text": "Three sided. It is a Wester Larch",
+				"next_q": null,
+				"answer": "larix occidentalis"
+			},
+			{
+				"text": "Four sided. It is a subalpine larch.",
+				"next_q": null,
+				"answer": "larix lyallii"
+			}
+		]
+	},
+	{
+		"id": 8,
+		"question": "The needles...",
+		"possible_answers": [{
+				"text": "narrow to a stalk where they join the twig.",
+				"next_q": 9
+			},
+			{
+				"text": "stay wide at the base.",
+				"next_q": 10
+			}
+		]
+	},
+	{
+		"id": 9,
+		"question": "Are the needles sharp spines?",
+		"possible_answers": [{
+				"text": "Yes. It is Saint Lucia Fir or a Bristle Cone Fir",
+				"next_q": null,
+				"answer": "larix bracteata"
+			},
+			{
+				"text": "No.",
+				"next_q": 11
+			}
+		]
+	},
+	{
+		"id": 10,
+		"question": "Do the needles from the lower branches have convex or rounded topsides and you can twirl them easily between your fingers?",
+		"possible_answers": [{
+				"text": "Yes. It is a California Red Fir.",
+				"next_q": null,
+				"answer": "abies magnifica"
+			},
+			{
+				"text": "No, the needles are flat and hard to twirl. The cones are over four inches long and the ends of the branchlets are rusty-red. It is a Noble Fir.",
+				"next_q": null,
+				"answer": "abies procera"
+			},
+			{
+				"text": "The twig bark is grey and the cones are less the four inches.",
+				"next_q": null,
+				"answer": "abies lasiocarpa"
+			}
+		]
+	},
+	{
+		"id": 11,
+		"question": "The needles are..",
+		"possible_answers": [{
+				"text": "Dark green and shiny on their top sides.",
+				"next_q": 12
+			},
+			{
+				"text": "Not shiny. Instead, they have a whitish band running alone the needle top. It is a White Fir.",
+				"next_q": null,
+				"answer": "abies concolor"
+			}
+		]
+	},
+	{
+		"id": 12,
+		"question": "The top needles ..",
+		"possible_answers": [{
+				"text": "on the lower branches point out to the side. It is a Grand Fir.",
+				"next_q": null,
+				"answer": "abies grandis"
+			},
+			{
+				"text": "point upwards or towards the end of the twig and the needles are silvery underneath. It is a Pacific Silver Fir.",
+				"next_q": null,
+				"answer": "abies amabilis"
+			}
+		]
+	},
+	{
+		"id": 13,
+		"question": "The needles are..",
+		"possible_answers": [{
+				"text": "Over 1-1/2 inches tall.",
+				"next_q": 12
+			},
+			{
+				"text": "Under 1-1/2 inches tall. It is a Foxtail Pine.",
+				"next_q": null,
+				"answer": "pinus balfouriana"
+			}
+		]
+	}
 ]

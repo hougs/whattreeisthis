@@ -7,6 +7,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
+import questionData from './questionData.json'
 
 function TabContainer(props) {
   return (
@@ -40,8 +41,6 @@ var cardStyle = {
    transitionDuration: '0.3s',
    height: '20vw'
 }
-
-const questionData = require('./questionData.json');
 
 class App extends React.Component {
   constructor(props) {
