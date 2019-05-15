@@ -265,15 +265,15 @@
 	},
 	{
 		"id": 18,
-		"question": "If tree has...",
+		"question": "Are the needles between 7 and 13 inches?",
 		"possible_answers": [{
-				"text": "long, upward curved lower branches, or foot-long needles, or dangerous looking 9-14 inch cones. It is a Coulter/Big Cone Pine.",
+				"text": "Yes. It is a Gray Pine",
 				"next_q": null,
-        "answer": "Pinus coulteri"
+        "answer": "Pinus sabiniana"
 			},
 			{
-				"text": "Lighter bark, shorter needles, and gentler looking cones.",
-				"next_q": 19
+				"text": "No, they are shorter.",
+				"next_q": 33
 			}
 		]
 	},
@@ -294,15 +294,15 @@
 	},
 {
   "id": 20,
-  "question": "Are the needles longer than 1-1/2 inches? ",
+  "question": "Are the needles  3-6 inches long? ",
   "possible_answers": [{
-      "text": "Yes.",
-      "next_q": 21
+      "text": "Yes. It is a Bishop Pine",
+      "next_q": null,
+      "answer": "pinus muricata"
     },
     {
-      "text": "Nope.  It is a Foxtail Pine. If you are in the mountains east of the Seirra Nevada it is a Western Bristlecone Pine.",
-      "next_q": null,
-      "answer": "pinus longeva"
+      "text": "No, they are shorter and twisted.",
+      "next_q": 34
     }
   ]
 },
@@ -459,6 +459,165 @@
     "text": "No, the cones are shorter. It is a Douglas Fir",
     "next_q": null,
     "answer": "pseudotsuga menziesii"
+  }
+]
+},
+{
+"id": 33,
+"question": "Is the foliage sparse and light green? ",
+"possible_answers": [{
+    "text": "Yes and the needles are twisted. It is Knobcone Pine.",
+    "next_q": null,
+    "answer": "pinus attenuata"
+  },
+  {
+    "text": "No. The foliage is dense, dark green, and the bark is blackish. It is a Monterey Pine.",
+    "next_q": null,
+    "answer": "pinus radiata"
+  }
+]
+},
+{
+"id": 34,
+"question": "Is the tree small and shruby? ",
+"possible_answers": [{
+    "text": "Yes. It also grows near sea level. IT is a Shore Pine/Beach Pine.",
+    "next_q": null,
+    "answer": "pinus contorta ssp. contorta"
+  },
+  {
+    "text": "No. The tree is larger and grows inland above 3000 feet. It is a Lodgepole Pine/Tamarac Pine.",
+    "next_q": null,
+    "answer": "pinus contorta ssp. murrayana"
+  }
+]
+}
+
+,
+{
+"id": 35,
+"question": "Do the ends of the branches look like they have been ironed flat? ",
+"possible_answers": [{
+    "text": "Yes. It is a cedar.",
+    "next_q": 36
+  },
+  {
+    "text": "No.",
+    "next_q": 39
+  }
+]
+},
+{
+"id": 36,
+"question": "Do the twig ends look joined? ",
+"possible_answers": [{
+    "text": "Yes. It is an Incense Cedar.",
+    "next_q": null,
+    "answer": "calocedrus decurrens"
+  },
+  {
+    "text": "No.",
+    "next_q": 37
+  }
+]
+},
+{
+"id": 37,
+"question": "Do the foliage look prickly or does the tree look wilted?",
+"possible_answers": [{
+    "text": "Yes. It is a Yellow Cyprus/Alaska Cedar.",
+    "next_q": null,
+    "answer": "cupressus nootkatensis"
+  },
+  {
+    "text": "No.",
+    "next_q": 38
+  }
+]
+},
+{
+"id": 38,
+"question": "Does the foliage look glossy and smell fragrant?",
+"possible_answers": [{
+    "text": "Yes or is has leathery, oblong cones. It is Western Red Cedar.",
+    "next_q": null,
+    "answer": "thuja plicata"
+  },
+  {
+    "text": "No. You can rub the whitish color off the foliage and the cones are round. It is Port-Ordford Cedar.",
+    "next_q": null,
+    "answer": "chamaecyparis lawsoniana"
+  }
+]
+},
+{
+"id": 39,
+"question": "Are the leaves arranged... ",
+"possible_answers": [{
+    "text": "Spirally around a twig and are awl-shaped. It is a Giant Sequoia",
+    "next_q": null,
+    "answer": "sequoiadendron gigantum"
+  },
+  {
+    "text": "Opposite of one another, not in a sprial.",
+    "next_q": 40
+  }
+]
+},
+{
+"id": 40,
+"question": "What do the fruits/cones on the tree look like? If you can not find any you may have a male tree. Go find a female.",
+"possible_answers": [{
+    "text": "Roundish, woody, cone-like fruits 1/2 in in diamater of larger. This is a Cypress.",
+    "next_q": null,
+    "answer": "too many cypress"
+  },
+  {
+    "text": "They are smaller, juicy/pulpy, berry like fruits. It is a Juniper.",
+    "next_q": 41
+  }
+]
+},
+{
+"id": 41,
+"question": "The tree has... ",
+"possible_answers": [{
+    "text": "Bluish berries and red/brown bark.",
+    "next_q": 42
+  },
+  {
+    "text": "Brownish berries and gray bark.",
+    "next_q": 43
+  }
+]
+},
+{
+"id": 42,
+"question": "Is the bark a bright rusty red and the berries are almost black? ",
+"possible_answers": [{
+    "text": "Yes. It is a Western Juniper/Sierra Juniper.",
+    "next_q": null,
+    "answer": "juniperus occidentalis"
+    },
+  {
+    "text": "No, the bark is brown and the berries are bright blue. It is a Rocky Mountain Juniper.",
+    "next_q": null,
+    "answer": "juniperus scopulorum"
+  }
+]
+},
+{
+"id": 43,
+"question": "Are you west of the Seirras?",
+"possible_answers": [{
+    "text": "Yes or the leaves on obviously dented it is a California Juniper.",
+    "next_q": null,
+    "answer": "juniperus californica"
+  },
+  {
+    "text": "No or the leaves are not obviously dented. IT is a Utah Juniper.",
+    "next_q": null,
+    "answer": "juniperus osteosperma"
   }
 ]
 }
