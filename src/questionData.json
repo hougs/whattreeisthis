@@ -63,7 +63,7 @@
 			},
 			{
 				"text": "No.",
-				"next_q": "TBD"
+				"next_q": 14
 			}
 		]
 	},
@@ -81,11 +81,11 @@
 			},
 			{
 				"text": "Three to a bundle.",
-				"next_q": "TBD"
+				"next_q": 17
 			},
 			{
 				"text": "Pairs.",
-				"next_q": "TBD"
+				"next_q": 20
 			}
 		]
 	},
@@ -193,5 +193,274 @@
 				"answer": "pinus balfouriana"
 			}
 		]
-	}
+	},
+	{
+		"id": 14,
+		"question": "Do the older twigs have stubby pegs on them where needles used to be?",
+		"possible_answers": [{
+				"text": "Yes.",
+				"next_q": 15
+			},
+			{
+				"text": "No, the twigs are smoother.",
+				"next_q": 26
+			}
+		]
+	},
+	{
+		"id": 15,
+		"question": "Do the branches hang vertically?",
+		"possible_answers": [{
+				"text": "Yes. There are many vertical hanging banchlets. It is a brewer sprice or a weeping spruce.",
+				"next_q": null,
+        "answer": "picea breweriana"
+			},
+			{
+				"text": "No, the branches don't hang vertically..",
+				"next_q": 16
+			}
+		]
+	},
+	{
+		"id": 16,
+		"question": "Are the needles flattened?",
+		"possible_answers": [{
+				"text": "Yes. The needles are flattened , four sided, and the same color on all sides. It is an Engelmann Spruce.",
+				"next_q": null,
+        "answer": "picea engelmannii"
+			},
+			{
+				"text": "The needles are somewhat flattened and lighter on the topsides. It is a Sitka Spruce.",
+				"next_q": null,
+        "answer": "picea sitchensis"
+			}
+		]
+	},
+	{
+		"id": 17,
+		"question": "The outermost twigs are...",
+		"possible_answers": [{
+				"text": "Thicker than an ordinary pencil.",
+				"next_q": 18
+			},
+			{
+				"text": "Thinner than an ordinary pencil.",
+				"next_q": 19
+			}
+		]
+	},
+	{
+		"id": 18,
+		"question": "If tree has...",
+		"possible_answers": [{
+				"text": "long, upward curved lower branches, or foot-long needles, or dangerous looking 9-14 inch cones. It is a Coulter/Big Cone Pine.",
+				"next_q": null,
+        "answer": "Pinus coulteri"
+			},
+			{
+				"text": "Lighter bark, shorter needles, and gentler looking cones.",
+				"next_q": 19
+			}
+		]
+	},
+	{
+		"id": 18,
+		"question": "If tree has...",
+		"possible_answers": [{
+				"text": "long, upward curved lower branches, or foot-long needles, or dangerous looking 9-14 inch cones. It is a Coulter/Big Cone Pine.",
+				"next_q": null,
+        "answer": "Pinus coulteri"
+			},
+			{
+				"text": "Lighter bark, shorter needles, and gentler looking cones.",
+				"next_q": 19
+			}
+		]
+	},
+	{
+		"id": 19,
+		"question": "The cones feel... ",
+		"possible_answers": [{
+				"text": "prickly and bark flakes broken off the trunk are yellow inside. It is a Ponderosa Pine.",
+				"next_q": null,
+        "answer": "pinus ponderosa"
+			},
+			{
+				"text": "not prickly, the bark flakes are gray inside, and the tree smells like a pineapple.  It is a Jeffery Pine.",
+				"next_q": null,
+        "answer": "pinus jefferyi"
+			}
+		]
+	},
+{
+  "id": 20,
+  "question": "Are the needles longer than 1-1/2 inches? ",
+  "possible_answers": [{
+      "text": "Yes.",
+      "next_q": 21
+    },
+    {
+      "text": "Nope.  It is a Foxtail Pine. If you are in the mountains east of the Seirra Nevada it is a Western Bristlecone Pine.",
+      "next_q": null,
+      "answer": "pinus longeva"
+    }
+  ]
+},
+{
+"id": 22,
+"question": "Are the needles longer than 7 inches? ",
+"possible_answers": [{
+    "text": "Yes. It is a Torrey Pine.",
+    "next_q": null,
+    "answer": "pinus torreyana"
+  },
+  {
+    "text": "Nope.",
+    "next_q": 23
+  }
+]
+},
+{
+"id": 23,
+"question": "Have the trees dropped cones to the ground? ",
+"possible_answers": [{
+    "text": "Yep.",
+    "next_q": 24
+  },
+  {
+    "text": "Nope. The only cones not yet destroyed by squirrels are roundish, purplish ones still on the tree. It is a Whitebark Pine",
+    "next_q": null,
+    "answer": "pinus albicaulis"
+  }
+]
+},
+{
+"id": 24,
+"question": "Are the cones longer than 1 foot? ",
+"possible_answers": [{
+    "text": "Yes. It is a Sugar Cone Pine.",
+    "next_q": null,
+    "answer": "pinus lambertiana"
+  },
+  {
+    "text": "No.",
+    "next_q": 25
+  }
+]
+},
+{
+"id": 25,
+"question": "Do the cones have thin scales? ",
+"possible_answers": [{
+    "text": "Yes. It is a Western White Pine.",
+    "next_q": null,
+    "answer": "pinus monticola"
+  },
+  {
+    "text": "No, the cone scales are thick at their tips.",
+    "next_q": null,
+    "answer": "pinus flexilis"
+  }
+]
+},
+{
+"id": 26,
+"question": "Can you easily roll a needle between your thumb and forefinger? ",
+"possible_answers": [{
+    "text": "Yes.",
+    "next_q": 27
+  },
+  {
+    "text": "No. The needles are too flat.",
+    "next_q": 28
+  }
+]
+},
+{
+"id": 27,
+"question": "Are the needles longer than 1 inch? ",
+"possible_answers": [{
+    "text": "Yes. It is a Singleleaf Pinyon",
+    "next_q": null,
+    "answer": "pinus monophylla"
+  },
+  {
+    "text": "No. It is a Mountain Hemlock.",
+    "next_q": null,
+    "answer" : "Tsuga mertensiana"
+  }
+]
+},
+{
+"id": 28,
+"question": "Are the needles pointed? ",
+"possible_answers": [{
+    "text": "Yes.",
+    "next_q": 29
+  },
+  {
+    "text": "No. The needles rounded or blunt.",
+    "next_q": 31
+  }
+]
+},
+{
+"id": 29,
+"question": "Are the needle points sharp, hard spines? ",
+"possible_answers": [{
+    "text": "Yes. It is a California Nutmeg",
+    "next_q": null,
+    "answer": "Torreya californica"
+  },
+  {
+    "text": "No. They are not spiny.",
+    "next_q": 30
+  }
+]
+},
+{
+"id": 30,
+"question": "Are the tops of the needles grooved? ",
+"possible_answers": [{
+    "text": "Yes. It is Redwood.",
+    "next_q": null,
+    "answer": "sequoia sempervirens"
+  },
+  {
+    "text": "No. The needles are ridged on top. It is a Pacific Yew.",
+    "next_q": null,
+    "answer": "taxus brevifolia"
+  }
+]
+},
+{
+"id": 31,
+"question": "Are the needles about half an inch long? ",
+"possible_answers": [{
+    "text": "Yes. It is a Western Hemlock.",
+    "next_q": null,
+    "answer": "tsuga heterophylla"
+  },
+  {
+    "text": "No. They are longer.",
+    "next_q": 32
+  }
+]
+},
+{
+"id": 32,
+"question": "Are the cones over 4 inches long? ",
+"possible_answers": [{
+    "text": "Yes. It is a Bigcone Douglas Fir",
+    "next_q": null,
+    "answer": "pseudotsuga macrocarpa"
+  },
+  {
+    "text": "No, the cones are shorter. It is a Douglas Fir",
+    "next_q": null,
+    "answer": "pseudotsuga menziesii"
+  }
+]
+}
+
 ]
