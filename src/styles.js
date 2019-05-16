@@ -8,7 +8,7 @@ const styles = theme => ({
        display: 'block',
        transitionDuration: '0.3s',
        height: '80vw',
-       minHeight: "600vw"
+       minHeight: 600
    },
    overlay: {
       position: 'absolute',

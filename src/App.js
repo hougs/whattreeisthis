@@ -1,9 +1,7 @@
 import React from 'react';
 import './App.css';
 import FloatingResetButton from './components/FloatingResetButton'
-import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/Card';
-import CardMedia from '@material-ui/core/Card';
+import ItemCard from './components/ItemCard'
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -13,6 +11,8 @@ import Typography from '@material-ui/core/Typography';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import questionData from './questionData.json'
 import styles from './styles.js'
+import Card from '@material-ui/core/Card';
+
 
 function TabContainer(props) {
   return (
@@ -119,6 +119,7 @@ class App extends React.Component {
       const questionHistory = this.state.questionHistory;
       if (this.state.hasNextQuestion ) {
         getCandidateItems(questionHistory[this.state.stepNumber].nodeId, candidateItems);
+        candidateItems = [... new Set(candidateItems)]
       }
       const floatingButton = <FloatingResetButton handleClick={() => this.jumpTo(0)}/>
       return (
@@ -134,14 +135,14 @@ class App extends React.Component {
             <TabContainer>{this.renderQuestion(this.props)}</TabContainer>
           }
           {value === 0 && !this.state.hasNextQuestion &&
-            <IdentifiedItem
+            <ItemCard
             imgPath={this.getTreeImagePath(this.state.idedTree)}
-            name={this.state.idedTree}></IdentifiedItem>}
+            name={this.state.idedTree}></ItemCard>}
           {value === 1 && <TabContainer>
             {candidateItems.map(item =>
-              <IdentifiedItem
+              <ItemCard
               imgPath={this.getTreeImagePath(item)}
-              name={item}></IdentifiedItem>
+              name={item}></ItemCard>
             )}
             </TabContainer>}
             {floatingButton}
@@ -149,22 +150,6 @@ class App extends React.Component {
         </MuiThemeProvider>
       );
   }
-}
-
-function IdentifiedItem(props) {
-  return(
-    <Card style={styles.card}>
-    <CardContent>
-    <h1>{props.name}</h1>
-    <CardMedia
-        style={styles.card}
-        image={props.imgPath}
-        title={props.name}
-      />
-      <img src={props.imgPath}/>
-      </CardContent>
-    </Card>
-  );
 }
 
 class Question extends React.Component {
@@ -208,8 +193,6 @@ function getCandidateItems(i, candidates) {
     }
   }
 }
-
-
 
 App.propTypes = {
   classes: PropTypes.object.isRequired,
