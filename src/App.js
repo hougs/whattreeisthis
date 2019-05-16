@@ -9,8 +9,11 @@ import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import Icon from '@material-ui/core/Icon';
+import Fab from '@material-ui/core/Fab';
 import questionData from './questionData.json'
-
+import styles from './styles.js'
 
 function TabContainer(props) {
   return (
@@ -24,40 +27,18 @@ TabContainer.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-const styles = theme => ({
-  root: {
-    flexGrow: 1,
-    backgroundColor: theme.palette.background.paper,
-    palette: {
-      primary: {
-        main: '#4caf50',
-      },
-      secondary: {
-        main: '#f50057',
-      },
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: '#81c784',
     },
+    secondary: {
+      main: '#ffab00',
+    },
+    type: 'light',
   },
-  media: {
-      height: 10,
-      paddingTop: '10%' // 16:9
-   },
-   card: {
-      position: 'relative',
-   },
-   overlay: {
-      position: 'absolute',
-      top: '20px',
-      left: '20px',
-      color: 'black',
-      backgroundColor: 'white'
-   }
 });
 
-var cardStyle = {
-   display: 'block',
-   transitionDuration: '0.3s',
-   height: '20vw'
-}
 
 class App extends React.Component {
   constructor(props) {
@@ -118,14 +99,20 @@ class App extends React.Component {
     onClick={i => this.handleClick(i)}/>);
   }
 
+  getTreeImagePath(treeName) {
+    return (process.env.PUBLIC_URL + `/img/${treeName}/full.jpg`.replace(' ', '-'));
+  }
+
   render() {
       const { classes } = this.props;
       const { value } = this.state;
-      let imagePath = process.env.PUBLIC_URL + `/img/${this.state.idedTree}/full.jpg`.replace(' ', '-');
       let candidateItems = [];
       const questionHistory = this.state.questionHistory;
-      getCandidateItems(questionHistory[this.state.stepNumber].nodeId, candidateItems);
+      if (this.state.hasNextQuestion ) {
+        getCandidateItems(questionHistory[this.state.stepNumber].nodeId, candidateItems);
+      }
       return (
+        <MuiThemeProvider theme={theme}>
         <div className={classes.root}>
           <AppBar position="static">
             <Tabs value={value} onChange={this.handleChange}>
@@ -138,15 +125,18 @@ class App extends React.Component {
           }
           {value === 0 && !this.state.hasNextQuestion &&
             <IdentifiedItem
-            imgPath={imagePath}
+            imgPath={this.getTreeImagePath(this.state.idedTree)}
             name={this.state.idedTree}></IdentifiedItem>}
           {value === 1 && <TabContainer>
             {candidateItems.map(item =>
-              <li>{item}</li>
+              <IdentifiedItem
+              imgPath={this.getTreeImagePath(item)}
+              name={item}></IdentifiedItem>
             )}
             </TabContainer>}
 
         </div>
+        </MuiThemeProvider>
       );
   }
 }
@@ -157,10 +147,11 @@ function IdentifiedItem(props) {
     <CardContent>
     <h1>{props.name}</h1>
     <CardMedia
-        style={styles.media}
+        style={styles.card}
         image={props.imgPath}
         title={props.name}
       />
+      <img src={props.imgPath}/>
       </CardContent>
     </Card>
   );
@@ -173,7 +164,7 @@ class Question extends React.Component {
       className="QuestionResponse"
       onClick={() => this.props.onClick(i)}
       key={this.props.possible_answers[i].text}
-      style={cardStyle}>
+      style={styles.card}>
         {this.props.possible_answers[i].text}
       </Card>
     );
