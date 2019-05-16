@@ -11,8 +11,8 @@ const styles = theme => ({
       position: 'relative',
        display: 'block',
        transitionDuration: '0.3s',
-       height: '20vw',
-       minHeight: "300px"
+       height: '40vw',
+       minHeight: "600px"
    },
    overlay: {
       position: 'absolute',

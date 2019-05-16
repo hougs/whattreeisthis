@@ -37,6 +37,10 @@ const theme = createMuiTheme({
     },
     type: 'light',
   },
+  typography: {
+    // In Japanese the characters are usually larger.
+    fontSize: 20,
+  },
 });
 
 
@@ -161,7 +165,6 @@ class Question extends React.Component {
   renderQuestionResponse(i) {
     return (
       <Card
-      className="QuestionResponse"
       onClick={() => this.props.onClick(i)}
       key={this.props.possible_answers[i].text}
       style={styles.card}>
