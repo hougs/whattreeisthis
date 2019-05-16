@@ -20,11 +20,13 @@
 		"question": "Are the leaves compound?",
 		"possible_answers": [{
 				"text": "Yes, they are composed of 2 or more leaflets.",
-				"next_q": "TBD"
+				"next_q": null,
+				"answer": "placeholder"
 			},
 			{
 				"text": "No, they are simple. They are made of a single leaflet.",
-				"next_q": "TBD"
+				"next_q": null,
+				"answer": "placeholder"
 			}
 		]
 	},

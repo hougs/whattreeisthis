@@ -65,7 +65,7 @@ class App extends React.Component {
     this.state = {
       questionHistory: [
         {
-          nodeId: 7
+          nodeId: 0
         }
       ],
       stepNumber: 0,
@@ -122,6 +122,9 @@ class App extends React.Component {
       const { classes } = this.props;
       const { value } = this.state;
       let imagePath = process.env.PUBLIC_URL + `/img/${this.state.idedTree}/full.jpg`.replace(' ', '-');
+      let candidateItems = [];
+      const questionHistory = this.state.questionHistory;
+      getCandidateItems(questionHistory[this.state.stepNumber].nodeId, candidateItems);
       return (
         <div className={classes.root}>
           <AppBar position="static">
@@ -137,7 +140,11 @@ class App extends React.Component {
             <IdentifiedItem
             imgPath={imagePath}
             name={this.state.idedTree}></IdentifiedItem>}
-          {value === 1 && <TabContainer>Candidate Trees TODO: render candidate trees</TabContainer>}
+          {value === 1 && <TabContainer>
+            {candidateItems.map(item =>
+              <li>{item}</li>
+            )}
+            </TabContainer>}
 
         </div>
       );
@@ -182,6 +189,23 @@ class Question extends React.Component {
           this.renderQuestionResponse(i))
         )}
       </div>)
+  }
+}
+
+function getCandidateItems(i, candidates) {
+  let question = questionData.filter(function(item){
+      return item.id===i;
+  })[0];
+
+  for(let i = 0; i < question.possible_answers.length; i++){
+    let possible_answer = question.possible_answers[i];
+    if (possible_answer.next_q !== null) {
+      getCandidateItems(possible_answer.next_q, candidates)
+    } else if (possible_answer.next_q === "TBD") {
+      break
+    } else {
+      candidates.push(possible_answer.answer)
+    }
   }
 }
 
