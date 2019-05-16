@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import FloatingResetButton from './components/FloatingResetButton'
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/Card';
@@ -10,8 +11,6 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-import Icon from '@material-ui/core/Icon';
-import Fab from '@material-ui/core/Fab';
 import questionData from './questionData.json'
 import styles from './styles.js'
 
@@ -64,6 +63,13 @@ class App extends React.Component {
     this.setState({ value });
   };
 
+  jumpTo(step) {
+    this.setState({
+      stepNumber: step,
+      hasNextQuestion: true
+    });
+  }
+
   handleClick(i) {
     const questionHistory = this.state.questionHistory.slice(0, this.state.stepNumber + 1);
     const currentQuestion = this.getByNodeId(questionHistory[this.state.stepNumber].nodeId);
@@ -85,7 +91,6 @@ class App extends React.Component {
       });
 
   }
-
   }
 
   getByNodeId(nodeId) {
@@ -115,6 +120,7 @@ class App extends React.Component {
       if (this.state.hasNextQuestion ) {
         getCandidateItems(questionHistory[this.state.stepNumber].nodeId, candidateItems);
       }
+      const floatingButton = <FloatingResetButton handleClick={() => this.jumpTo(0)}/>
       return (
         <MuiThemeProvider theme={theme}>
         <div className={classes.root}>
@@ -138,7 +144,7 @@ class App extends React.Component {
               name={item}></IdentifiedItem>
             )}
             </TabContainer>}
-
+            {floatingButton}
         </div>
         </MuiThemeProvider>
       );
@@ -202,6 +208,8 @@ function getCandidateItems(i, candidates) {
     }
   }
 }
+
+
 
 App.propTypes = {
   classes: PropTypes.object.isRequired,
