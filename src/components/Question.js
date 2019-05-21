@@ -32,11 +32,12 @@ class Question extends React.Component {
         onClick={() => this.props.onClick(i)}
         key={this.props.possible_answers[i].text}
         style={{
-          width: '100%',
+          width: '95vw',
           margin: 'auto',
-          padding: '10px',
+          padding: '5px',
           backgroundColor: '#ECEFF1',
-          minHeight: '20vh'
+          minHeight: '20vh',
+          maxWidth: '90vw'
     }}
       >
         {this.props.possible_answers[i].text}
@@ -47,8 +48,8 @@ class Question extends React.Component {
 
   render() {
     return (
-      <div className="question">
-        <div className="question-text">{this.props.question_text}</div>
+      <div>
+        <div>{this.props.question_text}</div>
         {this.props.possible_answers.map((item, i) =>
           this.renderQuestionResponse(i)
         )}

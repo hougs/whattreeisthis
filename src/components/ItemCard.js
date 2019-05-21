@@ -1,23 +1,32 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
-import styles from '../styles.js'
 import PropTypes from 'prop-types';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/Card';
 
+const styles = {
+  card: {
+    maxWidth: '90vw',
+  },
+  media: {
+    height: '20vh'
+  },
+};
+
+
 function ItemCard(props) {
+  const { classes } = props;
   return(
-    <Card style={styles.card}>
-    <CardContent>
-    <h1>{props.name}</h1>
+    <Card className={classes.card}>
     <CardMedia
-        style={styles.card}
+        className={classes.media}
         image={props.imgPath}
         title={props.name}
       />
-      <img src={props.imgPath}/>
-      </CardContent>
+    <CardContent>
+    <h1>{props.name}</h1>
+    </CardContent>
     </Card>
   );
 }

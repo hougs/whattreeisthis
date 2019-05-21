@@ -3,13 +3,6 @@ const styles = theme => ({
       height: 10,
       paddingTop: '10%' // 16:9
    },
-   card: {
-      position: 'relative',
-       display: 'block',
-       transitionDuration: '0.3s',
-       height: '80vw',
-       minHeight: 600
-   },
    overlay: {
       position: 'absolute',
       top: '20px',
