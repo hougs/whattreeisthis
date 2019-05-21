@@ -31,6 +31,13 @@ class Question extends React.Component {
       <Card
         onClick={() => this.props.onClick(i)}
         key={this.props.possible_answers[i].text}
+        style={{
+          width: '100%',
+          margin: 'auto',
+          padding: '10px',
+          backgroundColor: '#ECEFF1',
+          minHeight: '20vh'
+    }}
       >
         {this.props.possible_answers[i].text}
       </Card>

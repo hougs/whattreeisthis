@@ -2,6 +2,8 @@ import React from 'react';
 import './App.css';
 import FloatingResetButton from './components/FloatingResetButton'
 import ItemCard from './components/ItemCard'
+import Question from './components/Question'
+import TabContainer from './components/TabContainer'
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -12,19 +14,6 @@ import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import questionData from './questionData.json'
 import styles from './styles.js'
 import Card from '@material-ui/core/Card';
-
-
-function TabContainer(props) {
-  return (
-    <Typography component="div" style={{ padding: 8 * 3 }}>
-      {props.children}
-    </Typography>
-  );
-}
-
-TabContainer.propTypes = {
-  children: PropTypes.node.isRequired,
-};
 
 const theme = createMuiTheme({
   palette: {
@@ -149,31 +138,6 @@ class App extends React.Component {
         </div>
         </MuiThemeProvider>
       );
-  }
-}
-
-class Question extends React.Component {
-  renderQuestionResponse(i) {
-    return (
-      <Card
-      onClick={() => this.props.onClick(i)}
-      key={this.props.possible_answers[i].text}
-      style={styles.card}>
-        {this.props.possible_answers[i].text}
-      </Card>
-    );
-  }
-
-  render() {
-    return(
-      <div className="question">
-        <div className="question-text">
-          {this.props.question_text}
-        </div>
-        {this.props.possible_answers.map((item, i) => (
-          this.renderQuestionResponse(i))
-        )}
-      </div>)
   }
 }
 

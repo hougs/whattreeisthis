@@ -13,8 +13,14 @@ function FloatingResetButtons(props) {
     <div>
       <Fab color="secondary"
       aria-label="Reset"
-      className={classes.fab}
-      style={styles.fab}
+      style={{
+    margin: 0,
+    top: 'auto',
+    right: 20,
+    bottom: 20,
+    left: 'auto',
+    position: 'fixed',
+}}
       onClick={props.handleClick}>
         <RestoreIcon/>
       </Fab>
